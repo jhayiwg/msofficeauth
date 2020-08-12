@@ -1,6 +1,6 @@
 # Laravel Office 365 server to server token management
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+This package if for server to server processing.
 
 ## Installation
 
@@ -23,7 +23,9 @@ OAUTH_TOKEN_ENDPOINT=/oauth2/v2.0/token
 ```
 
 ### Authentication and Authorization
-After setting up authorize and store the token by visiting https://yoursite.loc/office/signin
+After setting up, visit visiting https://yoursite.loc/office/signin, login to your ms account then authorize the app. 
+
+The package will store or re-generate the token on your storage folder.
 
 ### Automatic Injection
 To use in the controller
