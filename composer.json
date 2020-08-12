@@ -1,0 +1,54 @@
+{
+    "name": "jhayiwg/msofficeauth",
+    "description": "Laravel Office 365 server to server token management",
+    "keywords": [
+        "laraoffice",
+        "msofficeauth"
+    ],
+    "homepage": "https://github.com/tabunan/msofficeauth",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jhay",
+            "email": "jhayghost@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "league/oauth2-client": "^2.5",
+        "microsoft/microsoft-graph": "^1.15"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaraOffice\\MsOfficeAuth\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaraOffice\\MsOfficeAuth\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaraOffice\\MsOfficeAuth\\MsOfficeAuthServiceProvider"
+            ],
+            "aliases": {
+                "MsOfficeAuth": "LaraOffice\\MsOfficeAuth\\MsOfficeAuthFacade"
+            }
+        }
+    }
+}
